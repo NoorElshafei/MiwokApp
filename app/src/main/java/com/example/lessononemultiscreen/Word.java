@@ -5,7 +5,7 @@ public class Word {
     private String mMiwokTranslation;
     private int image;
 
-    
+
 
 
     public Word(String mDefaultTranslation, String mMiwokTranslation,int image) {
