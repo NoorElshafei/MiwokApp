@@ -5,6 +5,7 @@ import android.content.Context;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,10 +17,13 @@ import android.widget.TextView;
 import java.util.List;
 
 public class WordAdapter extends ArrayAdapter<Word> {
+    private int mColorResourcId;
 
 
-    public WordAdapter(Context context, int resource,List<Word> objects) {
-        super(context, resource, objects);
+
+    public WordAdapter(Context context,List<Word> objects,int colorResourceId) {
+        super(context,0, objects);
+        this.mColorResourcId=colorResourceId;
         Log.i("WordAdapter", "constructor of WordAdapter");
     }
 
@@ -39,8 +43,20 @@ public class WordAdapter extends ArrayAdapter<Word> {
         moiwokTextView.setText(currentWord.getmMiwokTranslation());
         TextView defaultTextView = listItemView.findViewById(R.id.default_text_view);
         defaultTextView.setText(currentWord.getmDefaultTranslation());
+
         ImageView imageView=listItemView.findViewById(R.id.miowk_image_view);
-        imageView.setImageResource(currentWord.getImage());
+
+        if(currentWord.hasImage()){
+            imageView.setImageResource(currentWord.getImage());
+            imageView.setVisibility(View.VISIBLE);
+        }
+        else {
+            imageView.setVisibility(View.GONE);
+        }
+        View textContainer= listItemView.findViewById(R.id.text_container);
+        int color= ContextCompat.getColor(getContext(),mColorResourcId);
+        textContainer.setBackgroundColor(color);
+
         return listItemView;
     }
 }
