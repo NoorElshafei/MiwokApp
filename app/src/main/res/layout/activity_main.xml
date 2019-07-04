@@ -6,50 +6,70 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/numbersCategory">
     <TextView
         android:id="@+id/numbers"
         android:layout_width="match_parent"
         android:layout_height="88dp"
-        android:background="@color/numbersCategory"
+        android:background="?android:attr/selectableItemBackground"
         android:paddingLeft="16dp"
         android:paddingTop="23dp"
         android:text="Numbers"
         android:textColor="#fff"
         android:textSize="24sp"
        />
+    </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/familyCategory">
     <TextView
         android:id="@+id/family"
         android:layout_width="match_parent"
         android:layout_height="88dp"
-        android:background="@color/familyCategory"
+        android:background="?android:attr/selectableItemBackground"
         android:paddingLeft="16dp"
         android:paddingTop="23dp"
         android:text="Family Members"
         android:textColor="#fff"
         android:textSize="24sp" />
+    </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCategory">
     <TextView
         android:id="@+id/colors"
         android:layout_width="match_parent"
         android:layout_height="88dp"
-        android:background="@color/colorCategory"
+        android:background="?android:attr/selectableItemBackground"
         android:paddingLeft="16dp"
         android:paddingTop="23dp"
         android:text="Colors"
-        android:textColor="#fff"
+        android:textColor="@android:color/white"
         android:textSize="24sp" />
+    </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/phrasesCategory">
     <TextView
         android:id="@+id/phrases"
         android:layout_width="match_parent"
         android:layout_height="88dp"
-        android:background="@color/phrasesCategory"
+        android:background="?android:attr/selectableItemBackground"
         android:paddingLeft="16dp"
         android:paddingTop="23dp"
         android:text="Phrases"
         android:textColor="#fff"
         android:textSize="24sp" />
+    </FrameLayout>
+
 
 </LinearLayout>

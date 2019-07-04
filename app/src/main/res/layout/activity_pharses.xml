@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/list_phrases"
-    tools:context=".NumbersActivity">
+    tools:context=".NumbersActivity"
+    android:drawSelectorOnTop="true">
 
 
 </ListView>
