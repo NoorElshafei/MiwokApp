@@ -62,7 +62,7 @@ public class ColorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView= inflater.inflate(R.layout.list_item,container,false);
+        View rootView= inflater.inflate(R.layout.activity_colors,container,false);
 
 
         mAudioPlayer = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
@@ -82,10 +82,10 @@ public class ColorFragment extends Fragment {
 
         WordAdapter AdapterColor=new WordAdapter(getActivity(),wordsColor,R.color.colorCategory);
 
-        Log.i("NumbersActivity", "After definition of adapter");
+
         ListView listView =rootView.findViewById(R.id.list_color);
         listView.setAdapter(AdapterColor);
-        Log.i("NumbersActivity", "finish");
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
